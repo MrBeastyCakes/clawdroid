@@ -40,6 +40,12 @@ class _ChatScreenState extends State<ChatScreen> {
   final _messageController = TextEditingController();
   final _scrollController = ScrollController();
   String _chatId = 'flutter_user';
+  
+  // CONFIGURE THIS: Your PC's local IP address (find with ipconfig on Windows)
+  // Android emulator: use '10.0.2.2' for localhost forwarding
+  // Physical device on same WiFi: use your PC's IP (e.g., '192.168.92.79')
+  static const String _serverIp = '192.168.92.79'; // <-- CHANGE THIS to match your PC
+  static const int _serverPort = 8765;
 
   @override
   void initState() {
@@ -54,7 +60,7 @@ class _ChatScreenState extends State<ChatScreen> {
       });
 
       _channel = WebSocketChannel.connect(
-        Uri.parse('ws://localhost:8765'),
+        Uri.parse('ws://$_serverIp:$_serverPort'),
       );
 
       _channel!.stream.listen(
