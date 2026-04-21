@@ -1,0 +1,48 @@
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+*.lock
+
+# Android
+*.iml
+.gradle/
+/local.properties
+/.idea
+.DS_Store
+*.apk
+*.ap_
+*.aab
+
+# iOS
+/ios/Flutter/Flutter.framework
+/ios/Flutter/Flutter.podspec
+/ios/Flutter/Generated.xcconfig
+/ios/Flutter/app.flx
+/ios/Flutter/app.zip
+/ios/Flutter/flutter_assets/
+/ios/ServiceDefinitions.json
+/ios/Runner/GeneratedPluginRegistrant.*
+
+# Xcode
+/xcuserdata/
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Codecov
+coverage
+
+# Miscellaneous
+*.log
+*.tmp
+.env
+.env.*
